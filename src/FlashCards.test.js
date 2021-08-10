@@ -4,7 +4,7 @@ import { FlashCards } from "./FlashCards";
 
 test("should render something!", () => {
   render(<FlashCards />);
-  const thing = screen.getByText("start building");
+  const thing = screen.getByText(/start building/);
   userEvent.click(thing);
   expect(thing).toBeTruthy();
 });
